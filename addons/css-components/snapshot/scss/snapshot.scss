@@ -1,0 +1,71 @@
+// import config for snapshot
+@import "config";
+
+/* =============================================================
+
+    Snapshot v1.0
+    A collection of simple image styling adapted from Bootstrap.
+    http://getbootstrap.com
+
+    Licensed under Apache License v2.0.
+    http://www.apache.org/licenses/LICENSE-2.0
+
+ * ============================================================= */
+
+
+/* =============================================================
+    RESPONSIVE RESET
+    Replace with your own.
+ * ============================================================= */
+
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+   @-moz-viewport { width: device-width; zoom: 1.0; }
+    @-ms-viewport { width: device-width; zoom: 1.0; }
+     @-o-viewport { width: device-width; zoom: 1.0; }
+        @viewport { width: device-width; zoom: 1.0; }
+
+html { overflow-y: auto; }
+
+img, audio, video, canvas { max-width: 100%; }
+
+/*  Sets Body Width */
+.container {
+    max-width: $container-max-width;
+    width: $container-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* =============================================================
+    SNAPSHOT
+    Image styling.
+ * ============================================================= */
+
+/*  Adds a slight border radius */
+.img-rounded,
+%img-rounded {
+    border-radius: $img-rounded-border-radius;
+}
+
+/*  Adds a border and box shadow */
+.img-border,
+%img-border,
+.img-polaroid,
+%img-polaroid {
+    border: $img-border;
+    box-shadow: $img-box-shadow;
+}
+
+/*  Adds padding and a white border */
+.img-polaroid, %img-polaroid {
+    padding: $img-polaroid-padding;
+    background-color: $img-polaroid-bg-color;
+}
+
+/*  Adds a 50% border radius,
+ *  turning square images into a circle. */
+.img-circle, %img-circle {
+    border-radius: 50%;
+}

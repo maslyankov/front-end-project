@@ -1,0 +1,430 @@
+/*
+
+    KRAKEN-SASS
+    converted to SCSS by @jwebcat
+    A lightweight front-end boilerplate by Chris Ferdinandi.
+    http://gomakethings.com
+
+
+    Licensed under WTFPL.
+    http://www.wtfpl.net/
+
+
+    COLORS
+    primary: #0088cc
+    secondary: #005580
+    black: #272727
+    Gray: #808080
+    Light Gray: #e5e5e5
+
+
+    FONT STACKS
+    Serif: Georgia, Times, serif
+    Sans-Serif: "Helvetica Neue", Arial, sans-serif
+    Add your own here...
+
+
+    TYPOGRAPHIC SCALE
+    4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
+
+*/
+/*  CSS RESET */
+/*  Meyer's CSS Reset, Normalized.css, and custom code */
+/*  Mobile Screen Resizing */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+/*  Remove browser defaults */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+button, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*  Set display type for HTML5 semantic elements */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/*  Force scrollbar display to prevent jumping on pages.
+ *  Fix text resize bug on mobile devices. */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  Display audio, canvas, and video elements as inline block elements. */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*  Prevent modern browsers from displaying audio without controls. */
+audio:not([controls]) {
+  display: none; }
+
+/*  Prevent img and video elements from spilling
+ *  outside of the page on smaller screens. */
+img, video {
+  max-width: 100%;
+  height: auto; }
+
+/*  Prevent iframe, object, and embed elements from
+ *  spilling outside of the page on smaller screens. */
+iframe, object, embed {
+  max-width: 100%; }
+
+/*  Prevents IE from making scaled images look like crap */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/*  Address outline inconsistency between Chrome and other browsers. */
+a:focus,
+button:focus {
+  outline: thin dotted;
+  outline: .294117647em auto -webkit-focus-ring-color;
+  outline-offset: -.142857143em; }
+
+/*  Improve readability when focused and also mouse hovered in all browsers. */
+a:hover, a:active {
+  outline: 0; }
+
+/*  TYPOGRAPHY */
+/*  Sets font styles for entire site. */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 106.25%;
+  line-height: 1.47059;
+  color: #272727;
+  background: #ffffff; }
+
+p {
+  margin-bottom: 1.529411765em; }
+
+@media (min-width: 40em) {
+  body {
+    line-height: 1.588235294; } }
+
+/*  Sizes
+ *  For smaller and larger text */
+.text-small {
+  font-size: .882352941em;
+  line-height: 1.533333333; }
+
+.text-tall {
+  font-size: 1.166666667em;
+  line-height: 1.4; }
+
+@media (min-width: 40em) {
+  .text-tall {
+    font-size: 1.352941176em; } }
+
+/*  Colors
+ *  For alternate text colors */
+.text-muted {
+  color: #808080; }
+
+/*  Links
+ *  Hyperlink styling */
+a {
+  color: #0088cc;
+  text-decoration: none; }
+
+a:hover {
+  color: #005580;
+  text-decoration: underline; }
+
+a img {
+  border: none;
+  background: none; }
+
+/*  Prevents border/background on linked image hover.
+ *  Adds slight opacity. */
+a:hover img {
+  border: none;
+  background: none;
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+/*  Lists
+ *  Styling for lists */
+ul, ol {
+  margin-bottom: 1.529411765em;
+  margin-left: 2em; }
+
+ul ul, ul ol, ol ol, ol ul {
+  margin-bottom: 0; }
+
+ul {
+  list-style: disc; }
+
+ol {
+  list-style: decimal; }
+
+/*  Removes list styling.
+ *  For semantic reasons, should only
+ *  be used on unordered lists. */
+.list-unstyled {
+  margin-left: 0;
+  list-style: none; }
+
+/*  Headings
+ *  h1 through h6 styling
+ *  Heading class lets you use one heading type for semantics
+ *  but style it as another heading type. */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: normal;
+  margin-bottom: 1em;
+  padding-top: 1em; }
+
+h1, .h1 {
+  font-size: 1.529411765em;
+  padding-top: .5em; }
+
+h2, .h2 {
+  font-size: 1.352941176em; }
+
+h3, .h3 {
+  font-size: 1.176470588em; }
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-size: .882352941em;
+  font-style: italic; }
+
+h4, .h4 {
+  text-transform: uppercase; }
+
+@media (min-width: 40em) {
+  h1, .h1 {
+    font-size: 1.764705882em; } }
+
+/*  Lines, Quotes and Emphasis */
+/*  Lines */
+hr {
+  margin: 2em auto;
+  border: 0;
+  border-top: 0.07143em solid #e5e5e5;
+  border-bottom: 0.07143em solid #ffffff; }
+
+/*  Bold */
+strong {
+  font-weight: bold; }
+
+/*  Italics */
+em {
+  font-style: italic; }
+
+/*  Subscript & Superscript */
+sub, sup {
+  position: relative;
+  font-size: 85%;
+  font-weight: bold;
+  line-height: 0;
+  vertical-align: baseline;
+  margin-left: .3em; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/*  Highlighting colors */
+::-moz-selection {
+  color: #ffffff;
+  background: #0088cc; }
+::selection {
+  color: #ffffff;
+  background: #0088cc; }
+
+::-moz-selection {
+  color: #ffffff;
+  background: #0088cc; }
+
+/*  Blockquotes */
+blockquote {
+  border-left: 0.23529em solid #e5e5e5;
+  margin-bottom: 1.529411765em;
+  padding-left: 1.529411765em;
+  padding-right: 1.529411765em; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* =============================================================
+    HERO
+    Callout and background color styling.
+ * ============================================================= */
+.bg {
+  background-color: #f4f4f4;
+  padding-top: 1.52941em;
+  padding-bottom: 1.52941em; }
+
+.bg-blue {
+  color: #ffffff;
+  background-color: #0088cc; }
+
+.bg-condensed {
+  padding-top: 0.82353em;
+  padding-bottom: 0.82353em; }
+
+.hero {
+  background-color: #f4f4f4;
+  margin-bottom: 1.52941em;
+  padding: 1.52941em;
+  border: 0.07143em solid #e5e5e5;
+  border-radius: 0.23529em; }
+
+.hero-condensed {
+  padding: 0.82353em; }
+
+header {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+header a, header div {
+  fill: #fff; }
+
+.logo {
+  float: left; }
+
+.menu-sandwitch {
+  float: right; }
+
+.bodymovinanim {
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  fill: #fff; }
+
+ul.menu {
+  display: none;
+  width: 100%;
+  min-height: 40vh;
+  text-align: right;
+  list-style-type: none;
+  float: right;
+  font-size: 1.5em;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7); }
+
+.isvisible {
+  display: block !important;
+  -webkit-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }
+
+.menu li {
+  display: block;
+  margin: 0;
+  margin-left: 5px; }
+
+.menu li a {
+  text-decoration: none;
+  color: #fff; }
+
+.menu li a:hover {
+  color: #ccc; }
+
+.featured {
+  height: 300px;
+  padding: 60px 10px 10px 10px;
+  background: #999; }
+
+.overflow-x {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; }
+
+.container {
+  padding: 10px;
+  width: 100%; }
+
+.container-x {
+  margin-right: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.card {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  background: #ccc;
+  height: 300px;
+  width: 300px;
+  margin-right: 5px;
+  overflow: hidden; }
+
+.card-top {
+  position: absolute;
+  top: 0;
+  padding-left: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%; }
+
+.card-text-only .card-top {
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center; }
+
+.card-text-only .card-top {
+  height: 300px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.2em; }

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hero - Simple callout boxes and background colors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="css/hero.css" type="text/css">
+
+    <!-- HTML5 Shim for IE -->
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<section class="container">
+
+	    <hgroup>
+            <h1>Hero-Sass</h1>
+            <p>Simple callout boxes and background colors with a bit of Sass.</p>
+        </hgroup>
+
+
+        <h1>Callout Boxes</h1>
+
+        <div class="hero">
+            A hero is a simple callout box like this one. You might put a call-to-action or some noteworthy information here.
+        </div>
+
+        <div class="hero hero-condensed">
+            For smaller spaces, you might prefer a hero with less padding like this one.
+        </div>
+
+
+        <h1>Background Colors</h1>
+
+	</section>
+
+    <div class="bg">
+        <div class="container">
+            This section has a background color.
+        </div>
+    </div>
+
+    <div class="bg bg-blue">
+        <div class="container">
+            This section has a blue background.
+        </div>
+    </div>
+
+    <div class="bg bg-condensed">
+        <div class="container">
+            This section has a condensed background.
+        </div>
+    </div>
+
+    <hgroup>
+        <h1>Using Sass @extends</h1>
+        <h3> with %placeholders to keep us nice and DRY</h3>
+    </hgroup>
+
+    <section class="sass-hero-demo">
+        <h2>Hero demo with sass @extends</h2>
+        <article>
+            <div>
+                This is a demo of using Hero using @extends thanks to Sass! I'm a Hero unit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ut!
+            </div>
+            <div>
+                I'm a Condensed Hero! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, minima.
+            </div>
+        </article>
+        <h2>Bg Demo with Sass @extends</h2>
+    </section>
+
+    <section class="sass-bg-demo">
+        <div>
+           I have a background!
+        </div>
+        <div>
+           My background is blue!
+        </div>
+        <div>
+           My background is condensed!
+        </div>
+        <div>
+           My background is blue and condensed!
+        </div>
+    </section>
+
+</body>
+</html>

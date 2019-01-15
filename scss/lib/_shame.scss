@@ -1,0 +1,137 @@
+// here you can put all of your last minute or lazy hacks.
+// So that you can eliminate them all as you have time or want to
+header {
+    padding: 5px;
+    background: rgba(0,0,0, 0.7);
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+//   padding-top: 50px;
+}
+
+header a, header div {
+    fill: #fff;
+}
+
+.logo {
+    float:left;
+}
+
+.menu-sandwitch {
+    float: right;
+}
+
+.bodymovinanim {
+    height: 40px;
+    width: 50px;
+    cursor: pointer;
+    fill: #fff;
+}
+
+ul.menu {
+    display: none;
+    width: 100%;
+    min-height: 40vh;
+    text-align: right;
+    list-style-type: none;
+    float:right;
+    font-size: 1.5em;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    padding: 10px;
+    background: rgba(0,0,0, 0.7);
+}
+
+.isvisible {
+    display: block !important;   
+    transition: all 3s ease-in-out;
+}
+
+.menu li {
+    display: block;
+    margin: 0;
+    margin-left: 5px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu li a:hover{
+    color: #ccc;
+}
+
+.featured {
+    height: 300px;
+    padding: 60px 10px 10px 10px;
+    background: #999;
+}
+
+.overflow-x {
+    overflow-x: scroll;
+    white-space: nowrap; 
+    -webkit-overflow-scrolling: touch;
+}
+
+.container {
+    padding: 10px;
+    width: 100%;
+}
+
+.container-x {
+    margin-right: 0;
+    padding-right: 0;
+
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    background: #ccc;
+    height: 300px;
+    width: 300px;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.card-top {
+    position: absolute;
+    top: 0;
+    padding-left: 15px;
+    background: rgba(255,255,255, 0.8);
+    width: 100%;
+}
+
+%all-centered-middle{
+    display:-webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align:center;
+    display:box;
+    box-pack:center;
+    box-align:center;
+}
+
+.card-text-only {
+    .card-top {
+        height:300px;
+        text-align: center;
+        vertical-align: middle;
+        @extend %all-centered-middle;
+        font-size: 1.2em;
+    }
+}
