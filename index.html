@@ -16,7 +16,7 @@
 
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="css/kraken.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <!-- HTML5 Shim for IE 6-8 -->
     <!--[if lt IE 9]>
@@ -39,7 +39,7 @@
 
 </head>
 
-<body>
+<body class="image-below-header">
 
     <!-- Old Browser Warning -->
     <!-- If you're supporting IE 6-7, remove this -->
@@ -52,7 +52,7 @@
     <header class="">
 
         <div class="logo">
-            <svg width="40px" height="40px" viewBox="0 0 276 299" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <svg width="30px" height="30px" viewBox="0 0 276 299" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
                     <radialGradient cx="50%" cy="0%" fx="50%" fy="0%" r="90.3364757%" gradientTransform="translate(0.500000,0.000000),scale(1.000000,0.749091),rotate(132.364125),translate(-0.500000,-0.000000)" id="radialGradient-1">
                         <stop stop-color="#FFFFFF" stop-opacity="0.59" offset="0%"></stop>
@@ -73,11 +73,8 @@
             </svg>
         </div>
 
-
-
-
         <a class="menu-sandwitch">
-            <div class="bodymovinanim"></div>
+
         </a>
 
         <ul class="menu">
@@ -96,79 +93,90 @@
         <p>Content here.</p>
     </section>
     <section class="container container-x">
-        <!-- TO DO: "Today" Overfill-hidden, horizontal-scrolling only, card style -->
         <h1>Today</h1>
-        
-        <div class="overflow-x">
-            <div class="card">
-                <div class="card-top">
-                    <h3>Title</h3>
-                    <h4>subtitle</h4>
+
+        <div class="overflow-x cards">
+            <a href="event-view.html">
+                <div class="card">
+                    <div class="card-top">
+                        <h3>Title</h3>
+                        <h4>subtitle</h4>
+                    </div>
+                    <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
-                <img src="https://via.placeholder.com/300x300" class="" />
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <h3>Tifsadtle</h3>
-                    <h4>subtitle</h4>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <div class="card-top">
+                        <h3>Title</h3>
+                        <h4>subtitle</h4>
+                    </div>
+                    <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
-                <img src="https://via.placeholder.com/300x300" class="" />
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <h3>fdkmldslds</h3>
-                    <h4>subtitle</h4>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <div class="card-top">
+                        <h3>Title</h3>
+                        <h4>subtitle</h4>
+                    </div>
+                    <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
-                <img src="https://via.placeholder.com/300x300" class="" />
-            </div>
-            <div class="card card-text-only">
-                <div class="card-top">
-                    <h2>View all</h2>
+            </a>
+            <a href="#">
+                <div class="card card-last">
+                    <div class="card-top">
+                        <h3>View all</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
 
     </section>
     <section class="container container-x">
-        <!-- TO DO: "Categories" Overfill-hidden, horizontal-scrolling only, card style -->
         <h1>Categories</h1>
-        
-        <div class="overflow-x">
-            <div class="card">
-                <div class="card-top">
-                    <h3>Title</h3>
-                    <h4>subtitle</h4>
+
+        <div class="overflow-x cards cards-toi">
+            <a href="#">
+                <div class="card">
+                    <div class="card-top">
+                        <h3>Title</h3>
+                    </div>
+                    <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
-                <img src="https://via.placeholder.com/300x300" class="" />
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <h3>Tifsadtle</h3>
-                    <h4>subtitle</h4>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <div class="card-top">
+                        <h3>Title</h3>
+                    </div>
+                    <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
-                <img src="https://via.placeholder.com/300x300" class="" />
-            </div>
-            <div class="card">
-                <div class="card-top">
-                    <h3>fdkmldslds</h3>
-                    <h4>subtitle</h4>
+            </a>
+            <a href="#">
+                <div class="card">
+                    <div class="card-top">
+                        <h3>Title</h3>
+                    </div>
+                    <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
-                <img src="https://via.placeholder.com/300x300" class="" />
-            </div>
-            <div class="card card-text-only">
-                <div class="card-top">
-                    <h2>View all</h2>
+            </a>
+            <a href="#">
+                <div class="card card-last">
+                    <div class="card-top">
+                        <h3>View all</h3>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
     <section class="container">
-        <!-- TO DO: "Pick the date" Filter, card style list -->
 
         <h1>Search</h1>
 
-        
-        <div class="overflow-x">
+        <!-- TO DO: "Pick the date" Filter, card style list -->
+
+        <div class="search">
             <div class="card">
                 <div class="card-top">
                     <h3>Title</h3>
@@ -190,9 +198,9 @@
                 </div>
                 <img src="https://via.placeholder.com/300x300" class="" />
             </div>
-            <div class="card card-text-only">
+            <div class="card card-last">
                 <div class="card-top">
-                    <h2>View all</h2>
+                    <h3>Load more</h3>
                 </div>
             </div>
         </div>
@@ -201,12 +209,10 @@
 
     <!-- TO DO: Footer -->
     <footer>
-
+        <h3>Designed by Marto</h1>
     </footer>
     <!-- Javascript -->
     <!-- In the footer for better performance -->
-    <script src="js/min/kraken.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
     <script src="js/scripts.js"></script>
 
 </body>

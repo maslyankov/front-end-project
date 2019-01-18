@@ -1,8 +1,26 @@
 // here you can put all of your last minute or lazy hacks.
 // So that you can eliminate them all as you have time or want to
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+    //   padding-top: 50px;
+    z-index: 0;
+    background: #fff;
+    padding-top: 50px;
+}
+
+.image-below-header{
+    padding-top:0;
+}
+
 header {
     padding: 5px;
-    background: rgba(0,0,0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     height: 50px;
     position: fixed;
     top: 0;
@@ -11,27 +29,39 @@ header {
     z-index: 999;
 }
 
-* {
-    box-sizing: border-box;
+h1 {
+    font-size: 2em;
+    margin: 5px;
 }
 
-body {
-//   padding-top: 50px;
+h2 {
+    font-size: 1.6em;
 }
 
-header a, header div {
+h3 {
+    font-size: 1.3em;
+}
+
+h1,
+h2,
+h3,
+h4 {}
+
+header a,
+header div {
     fill: #fff;
 }
 
 .logo {
-    float:left;
+    float: left;
+    padding: 7px;
 }
 
 .menu-sandwitch {
     float: right;
 }
 
-.bodymovinanim {
+.menu-icon {
     height: 40px;
     width: 50px;
     cursor: pointer;
@@ -44,18 +74,18 @@ ul.menu {
     min-height: 40vh;
     text-align: right;
     list-style-type: none;
-    float:right;
+    float: right;
     font-size: 1.5em;
     margin: 0;
     position: absolute;
     left: 0;
     top: 50px;
     padding: 10px;
-    background: rgba(0,0,0, 0.7);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .isvisible {
-    display: block !important;   
+    display: block !important;
     transition: all 3s ease-in-out;
 }
 
@@ -65,12 +95,12 @@ ul.menu {
     margin-left: 5px;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
     color: #fff;
 }
 
-.menu li a:hover{
+.menu li a:hover {
     color: #ccc;
 }
 
@@ -82,7 +112,7 @@ ul.menu {
 
 .overflow-x {
     overflow-x: scroll;
-    white-space: nowrap; 
+    white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
 
@@ -107,31 +137,103 @@ ul.menu {
     width: 300px;
     margin-right: 5px;
     overflow: hidden;
-}
 
-.card-top {
-    position: absolute;
-    top: 0;
-    padding-left: 15px;
-    background: rgba(255,255,255, 0.8);
-    width: 100%;
-}
-
-%all-centered-middle{
-    display:-webkit-box;
-    -webkit-box-pack:center;
-    -webkit-box-align:center;
-    display:box;
-    box-pack:center;
-    box-align:center;
-}
-
-.card-text-only {
     .card-top {
-        height:300px;
+        position: absolute;
+        top: 0;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
+.cards a,
+.cards a:hover {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+%all-centered-middle {
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: box;
+    box-pack: center;
+    box-align: center;
+}
+
+
+.cards-toi div.card{
+    width: 200px;
+    height: 200px;
+    
+    div.card-top{
+        height:100%;
+        @extend %all-centered-middle;
+    }
+    
+}
+
+a {
+    height: inherit;
+    width: inherit;
+}
+
+div.card-last {
+    width: 150px !important;
+    font-size: 1.2em !important;
+    .card-top {
+        @extend %all-centered-middle;
+        height: 300px;
+        width: 150px;
         text-align: center;
         vertical-align: middle;
-        @extend %all-centered-middle;
-        font-size: 1.2em;
     }
+}
+
+.search {
+    .card {
+        width: 100% !important;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .card-last .card-top,
+    .card-last {
+        height: 100px;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+footer {
+    @extend %all-centered-middle;
+    width: 100%;
+    height: 100px;
+    margin-top: 30px;
+    color: #ccc;
+    background: #000;
 }

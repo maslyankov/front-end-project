@@ -1,0 +1,279 @@
+/*  CSS RESET */
+/*  Meyer's CSS Reset, Normalized.css, and custom code */
+/*  Mobile Screen Resizing */
+@-webkit-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-moz-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-ms-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@-o-viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+@viewport {
+  width: device-width;
+  zoom: 1.0; }
+
+/*  Remove browser defaults */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+button, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*  Set display type for HTML5 semantic elements */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/*  Force scrollbar display to prevent jumping on pages.
+ *  Fix text resize bug on mobile devices. */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/*  Display audio, canvas, and video elements as inline block elements. */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*  Prevent modern browsers from displaying audio without controls. */
+audio:not([controls]) {
+  display: none; }
+
+/*  Prevent img and video elements from spilling
+ *  outside of the page on smaller screens. */
+img, video {
+  max-width: 100%;
+  height: auto; }
+
+/*  Prevent iframe, object, and embed elements from
+ *  spilling outside of the page on smaller screens. */
+iframe, object, embed {
+  max-width: 100%; }
+
+/*  Prevents IE from making scaled images look like crap */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/*  Address outline inconsistency between Chrome and other browsers. */
+a:focus,
+button:focus {
+  outline: thin dotted;
+  outline: .294117647em auto -webkit-focus-ring-color;
+  outline-offset: -.142857143em; }
+
+/*  Improve readability when focused and also mouse hovered in all browsers. */
+a:hover, a:active {
+  outline: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  z-index: 0;
+  background: #fff;
+  padding-top: 50px; }
+
+.image-below-header {
+  padding-top: 0; }
+
+header {
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; }
+
+h1 {
+  font-size: 2em;
+  margin: 5px; }
+
+h2 {
+  font-size: 1.6em; }
+
+h3 {
+  font-size: 1.3em; }
+
+header a,
+header div {
+  fill: #fff; }
+
+.logo {
+  float: left;
+  padding: 7px; }
+
+.menu-sandwitch {
+  float: right; }
+
+.menu-icon {
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  fill: #fff; }
+
+ul.menu {
+  display: none;
+  width: 100%;
+  min-height: 40vh;
+  text-align: right;
+  list-style-type: none;
+  float: right;
+  font-size: 1.5em;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7); }
+
+.isvisible {
+  display: block !important;
+  -webkit-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }
+
+.menu li {
+  display: block;
+  margin: 0;
+  margin-left: 5px; }
+
+.menu li a {
+  text-decoration: none;
+  color: #fff; }
+
+.menu li a:hover {
+  color: #ccc; }
+
+.featured {
+  height: 300px;
+  padding: 60px 10px 10px 10px;
+  background: #999; }
+
+.overflow-x {
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch; }
+
+.container {
+  padding: 10px;
+  width: 100%; }
+
+.container-x {
+  margin-right: 0;
+  padding-right: 0;
+  width: 100%; }
+
+.card {
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+  background: #ccc;
+  height: 300px;
+  width: 300px;
+  margin-right: 5px;
+  overflow: hidden; }
+  .card .card-top {
+    position: absolute;
+    top: 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%; }
+    .card .card-top h1,
+    .card .card-top h2,
+    .card .card-top h3,
+    .card .card-top h4 {
+      margin: 0;
+      padding: 0; }
+
+.cards a,
+.cards a:hover {
+  color: inherit; }
+
+a {
+  text-decoration: none;
+  display: inline-block; }
+
+.cards-toi div.card div.card-top, div.card-last .card-top, footer {
+  display: -ms-flexbox;
+  -ms-flex-pack: center;
+  -ms-flex-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center; }
+
+.cards-toi div.card {
+  width: 200px;
+  height: 200px; }
+  .cards-toi div.card div.card-top {
+    height: 100%; }
+
+a {
+  height: inherit;
+  width: inherit; }
+
+div.card-last {
+  width: 150px !important;
+  font-size: 1.2em !important; }
+  div.card-last .card-top {
+    height: 300px;
+    width: 150px;
+    text-align: center;
+    vertical-align: middle; }
+
+.search .card {
+  width: 100% !important;
+  display: block;
+  margin-bottom: 10px; }
+
+.search .card-last .card-top,
+.search .card-last {
+  height: 100px;
+  width: 100%; }
+
+.search img {
+  width: 100%;
+  height: auto; }
+
+footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  color: #ccc;
+  background: #000; }

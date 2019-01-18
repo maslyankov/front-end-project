@@ -1,38 +1,3 @@
-/*
-
-    KRAKEN-SASS
-    converted to SCSS by @jwebcat
-    A lightweight front-end boilerplate by Chris Ferdinandi.
-    http://gomakethings.com
-
-
-    Licensed under WTFPL.
-    http://www.wtfpl.net/
-
-
-    COLORS
-    primary: #0088cc
-    secondary: #005580
-    black: #272727
-    Gray: #808080
-    Light Gray: #e5e5e5
-
-
-    FONT STACKS
-    Serif: Georgia, Times, serif
-    Sans-Serif: "Helvetica Neue", Arial, sans-serif
-    Add your own here...
-
-
-    TYPOGRAPHIC SCALE
-    4px, 5px, 8px, 10px, 11px, 14px, 15px, 17px (base), 20px, 23px, 26px, 30px, 34px, 51px, 68px, 85px, 102px
-
-*/
-
-// ----------------------------------------
-// // ------ Config for Kraken ------
-// ----------------------------------------
-
 // ----------------------------------------
 // // ------ font-size ------
 // ----------------------------------------
@@ -66,17 +31,11 @@ $containerMaxWidth: 40em;
 $containerWidth: 88%;
 
 // ----------------------------------------
-// // ------ Typography Settings ------
+// // ------ Typography Settings ------ dsa
 // ----------------------------------------
 
-$body-font-family: "Helvetica Neue", Arial, sans-serif;
-$body-line-height: 1.470588235;
-$body-lap-line-height: 1.588235294;
-$text-small-font-size: .882352941em;
-$text-small-line-height: 1.533333333;
-$text-tall-font-size: 1.166666667em;
-$text-tall-line-height: 1.4;
-$text-tall-lap-font-size: 1.352941176em;
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
 
 // ----------------------------------------
 // // ------ header settings --------
