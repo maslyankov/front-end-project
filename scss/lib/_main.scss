@@ -1,5 +1,5 @@
-// here you can put all of your last minute or lazy hacks.
-// So that you can eliminate them all as you have time or want to
+// Main styling
+// mobile-first styling
 
 * {
     box-sizing: border-box;
@@ -12,21 +12,20 @@ body {
     z-index: 0;
     background: #fff;
     padding-top: 50px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
 }
 
 .image-below-header{
     padding-top:0;
 }
 
-header {
-    padding: 5px;
-    background: rgba(0, 0, 0, 0.7);
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
+a {
+    color: $primary-color;
+}
+
+a:hover{
+    color: $hover-color;
 }
 
 h1 {
@@ -45,63 +44,9 @@ h3 {
 h1,
 h2,
 h3,
-h4 {}
-
-header a,
-header div {
-    fill: #fff;
-}
-
-.logo {
-    float: left;
-    padding: 7px;
-}
-
-.menu-sandwitch {
-    float: right;
-}
-
-.menu-icon {
-    height: 40px;
-    width: 50px;
-    cursor: pointer;
-    fill: #fff;
-}
-
-ul.menu {
-    display: none;
-    width: 100%;
-    min-height: 40vh;
-    text-align: right;
-    list-style-type: none;
-    float: right;
-    font-size: 1.5em;
-    margin: 0;
-    position: absolute;
-    left: 0;
-    top: 50px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.isvisible {
-    display: block !important;
-    transition: all 3s ease-in-out;
-}
-
-.menu li {
-    display: block;
-    margin: 0;
-    margin-left: 5px;
-}
-
-.menu li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-.menu li a:hover {
-    color: #ccc;
+h4 {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .featured {
@@ -111,7 +56,7 @@ ul.menu {
 }
 
 .overflow-x {
-    overflow-x: scroll;
+    overflow: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
@@ -122,21 +67,33 @@ ul.menu {
 }
 
 .container-x {
-    margin-right: 0;
     padding-right: 0;
 
     width: 100%;
 }
 
+%flex{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;     /* NEW - Chrome */
+  display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+}
+
+%card {
+    margin:0 10px 10px 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
 .card {
+    @extend %card;
+    
     position: relative;
-    display: inline-block;
-    border-radius: 10px;
     background: #ccc;
     height: 300px;
     width: 300px;
-    margin-right: 5px;
-    overflow: hidden;
 
     .card-top {
         position: absolute;
@@ -155,6 +112,10 @@ ul.menu {
     }
 }
 
+.cards{
+    @extend %flex;
+}
+
 .cards a,
 .cards a:hover {
     color: inherit;
@@ -162,8 +123,6 @@ ul.menu {
 
 a {
     text-decoration: none;
-    display: inline-block;
-
 }
 
 %all-centered-middle {
@@ -210,6 +169,7 @@ div.card-last {
     }
 }
 
+
 .search {
     .card {
         width: 100% !important;
@@ -229,6 +189,10 @@ div.card-last {
     }
 }
 
+
+
+
+
 footer {
     @extend %all-centered-middle;
     width: 100%;
@@ -237,3 +201,4 @@ footer {
     color: #ccc;
     background: #000;
 }
+

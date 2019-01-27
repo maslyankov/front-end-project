@@ -1,0 +1,40 @@
+
+.profile{
+    display: inline-block;
+    width:100%;
+    
+    div{
+        float: left;
+        
+    }
+    
+    .profile-left{
+        width: $profile-photo-size;
+        padding: 10px;
+    }
+    .profile-right{
+        position: relative;
+        width: auto;
+        height: $profile-photo-size;
+        margin-left: 10px;
+        min-width: 200px;
+        max-width: 70%;
+        
+        button{
+            position: absolute;
+            height: auto;
+            bottom: 0;
+
+        }
+  
+    }
+    
+    nav{
+        
+    }
+}
+
+.profile-photo{
+    border-radius: 50%;
+    width: $profile-photo-size;
+}

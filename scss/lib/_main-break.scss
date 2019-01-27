@@ -1,0 +1,44 @@
+
+
+@include breakpoint(phablet) {
+    body{
+
+    }
+    
+    .search {
+        .card {
+            width: calc(33.33% - 13px) !important;
+            height: auto;
+            display: inline-block;
+        }
+    }
+}
+
+@include breakpoint(laptop){
+    body{
+
+    }
+    
+    a:hover {
+        color: $hover-color;
+    }
+    
+    .container-x{
+        padding-right: 10px;
+        
+    }
+    
+    .container {
+        max-width: 58em;
+        margin: auto;
+        padding-right: 0;
+    }
+    
+    .search {
+        .card {
+            width: calc(25% - 14px) !important;
+            height: auto;
+            display: inline-block;
+        }
+    }
+}

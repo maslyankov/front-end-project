@@ -1,0 +1,23 @@
+.profile {
+  display: inline-block;
+  width: 100%; }
+  .profile div {
+    float: left; }
+  .profile .profile-left {
+    width: 100px;
+    padding: 10px; }
+  .profile .profile-right {
+    position: relative;
+    width: auto;
+    height: 100px;
+    margin-left: 10px;
+    min-width: 200px;
+    max-width: 70%; }
+    .profile .profile-right button {
+      position: absolute;
+      height: auto;
+      bottom: 0; }
+
+.profile-photo {
+  border-radius: 50%;
+  width: 100px; }

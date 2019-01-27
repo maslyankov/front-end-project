@@ -1,0 +1,76 @@
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #0D1313;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: $logo-color;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.site-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: $nav-color;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        padding: 20px;
+        display: inline-block;
+    }
+    
+}
+
+a.active {
+    border-bottom: 1px $primary-color solid;
+}
+
+.secondarynav a{
+    color: $secondarynav-color !important;
+}
+    
+
+
+@include breakpoint(phablet) {
+
+
+    .featured {
+        padding: 80px 10px 10px 10px;
+    }
+
+    body {
+        padding-top: 70px;
+    }
+}
+
+
+@include breakpoint(tablet) {}
+
+@include breakpoint(laptop) {
+    .site-nav {
+        a:hover {
+            color: $nav-color;
+        }
+    }
+}

@@ -1,86 +1,223 @@
-/*  FORMS */
-/*  Styling for form elements */
-
-form, fieldset {
-    margin-bottom: 1.529411765em;
+form {
+    @extend %card;
+    background: #fff;
+    border: 0 solid #000;
+    padding: 20px;
+    font-size: 1.3em;
+    margin: 10px;
+    width: calc(100% - 20px);
+    border-radius: 30px;
 }
 
-legend, label {
-    display: block;
-    font-weight: normal;
-    padding: 0;
-    margin-bottom: .294117647em;
+// VARIABLES // ============================== //
+$bg-color: #424242;
+$hl-color: #2196F3;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 100%;
+
+*,
+:before,
+:after {
+  box-sizing: border-box;
 }
 
-input, textarea, select {
-    display: block;
-    width: 100%;
-    font: inherit;
-    line-height: 1.470588235;
-    color: #555555;
-    vertical-align: middle;
-    margin-bottom: 1.176470588em;
-    padding: .294117647em;
-    border: .071428571em solid #b8b8b8;
-    border-radius: $input-border-radius;
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+// FORM // ============================== //
+form {
+  
+  h1 {
+    font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+    color: $hl-color;
+  }
+  h5 {
+    text-align: center;
+    text-transform: uppercase;
+    color: $muted-color;
+  }
+  hr.sep {
+    background: $hl-color;
+    box-shadow: none;
+    border: none;
+    height: 2px;
+    width: 25%;
+    margin: 0px auto 45px auto;
+  }
+  .emoji {
+    font-size: 1.2em;
+  }
 }
 
-form button, form .btn {
-    margin-bottom: 1.176470588em;
+.group {
+  position: relative;
+  margin: 45px 0;
 }
 
+// INPUTS // ============================== //
 textarea {
-    height: 12em;
+  resize: none;
 }
 
-input[type="image"],
-input[type="checkbox"],
-input[type="radio"] {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin-bottom: .294117647em;
-    cursor: pointer;
+input,
+textarea {
+  background: none;
+  color: $muted-color;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: $width;
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid $muted-color;
+  &:focus {
+    outline: none;
+  }
+  &:focus ~ label,
+  &:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: $hl-color;
+  }
+  &:focus ~ .bar:before {
+    width: $width;
+  }
 }
 
-input:focus,
-textarea:focus {
-    border-color: $input-focus-border;
-    -webkit-box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em $input-focus-shadow;
-            box-shadow: inset 0 .071428571em .071428571em rgba(0, 0, 0, 0.075), 0 0 .470588235em $input-focus-shadow;
-    outline: 0;
-    outline: thin dotted \9;
+input[type="password"] {
+  letter-spacing: 0.3em;
 }
 
-input[type="file"]:focus,
-input[type="checkbox"]:focus,
-select:focus {
-    outline: thin dotted;
-    outline: .294117647em auto -webkit-focus-ring-color;
-    outline-offset: -.117647059em;
+label {
+  color: $muted-color;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: $trans-time ease all;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: $width;
+  &:before {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: $hl-color;
+    transition: $trans-time ease all;
+    left: 0%;
+  }
+}
+
+/* select starting stylings ------------------------------*/
+.select {
+  font-family:
+    'Roboto','Helvetica','Arial',sans-serif;
+	position: relative;
+	width: 100%;
+}
+
+.select-text {
+	position: relative;
+	font-family: inherit;
+	background-color: transparent;
+	width: 100%;
+	padding: 10px 10px 10px 0;
+	font-size: 18px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid $muted-color;
+}
+
+/* Remove focus */
+.select-text:focus {
+	outline: none;
+	border-bottom: 1px solid rgba(0,0,0, 0);
+}
+
+	/* Use custom arrow */
+.select .select-text {
+	appearance: none;
+	-webkit-appearance:none
+}
+
+.select:after {
+	position: absolute;
+	top: 18px;
+	right: 10px;
+	/* Styling the down arrow */
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid rgba(0, 0, 0, 0.12);
+	pointer-events: none;
 }
 
 
-/*  Inline Inputs */
-.input-inline {
-    display: inline;
-    width: auto;
+/* LABEL ======================================= */
+.select-label {
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 10px;
+	transition: 0.2s ease all;
 }
 
-
-/*  Condensed Inputs */
-.input-condensed {
-    line-height: 1;
-    padding: .117647059em;
+/* active state */
+.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
+	color: $hl-color;
+	top: -20px;
+	transition: 0.2s ease all;
+	font-size: 14px;
 }
 
+/* BOTTOM BARS ================================= */
+.select-bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
 
-@media (min-width: 40em) {
-    input, textarea, select {
-        line-height: 1.588235294;
-    }
+.select-bar:before, .select-bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: $hl-color;
+	transition: 0.2s ease all;
+}
+
+.select-bar:before {
+	left: 50%;
+}
+
+.select-bar:after {
+	right: 50%;
+}
+
+/* active state */
+.select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
+	width: 50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.select-highlight {
+	position: absolute;
+	height: 60%;
+	width: 100%;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
 }

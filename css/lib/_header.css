@@ -1,0 +1,49 @@
+header a,
+header div {
+  fill: #fff; }
+
+.logo {
+  float: left;
+  padding: 5px 0; }
+
+.menu-sandwitch {
+  float: right; }
+
+.menu-icon {
+  height: 40px;
+  width: 50px;
+  cursor: pointer;
+  fill: #fff; }
+
+ul.menu {
+  display: none;
+  width: 100%;
+  min-height: 40vh;
+  text-align: right;
+  list-style-type: none;
+  float: right;
+  font-size: 1.5em;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7); }
+
+.isvisible {
+  display: block !important;
+  -webkit-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out; }
+
+.menu li {
+  display: block;
+  margin: 0;
+  margin-left: 5px; }
+
+.menu li a {
+  text-decoration: none;
+  color: #fff; }
+
+.menu li a:hover {
+  color: #ccc; }
