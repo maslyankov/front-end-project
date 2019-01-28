@@ -256,6 +256,30 @@ div.card-last {
   width: 100%;
   height: auto; }
 
+.list-detailed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .list-detailed .list-detailed-group {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .list-detailed .card, .list-detailed .cate {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
 .flex-row {
   display: -webkit-box;
   display: -ms-flexbox;
