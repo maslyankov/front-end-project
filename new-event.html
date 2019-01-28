@@ -40,8 +40,60 @@
 </head>
 
 <body>
+    
+    <div id="wrapper">
+    <header class="site-header">
+        <section class="container">
+            <a href="#0" for="openMenu" class="logo">Eventless</a>
 
-    <section class="content">
+            <nav class="site-nav" id="menu">
+                <ul>
+                    <li><a href="#0">Home</a></li>
+                    <li><a href="#0">About</a></li>
+                    <li><a href="user-panel.html">Profile</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <button class="btn-toggle" id="menu-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+        </section>
+    </header>
+     
+    <section class="container container-x">
+        <h1>Profile</h1>
+        <section class="profile">
+            <div class="profile-left">
+                <img src="https://via.placeholder.com/300x300" alt="Profile Photo" class="profile-photo" />
+            </div>
+            <div class="profile-right">
+                <h2>Jesus</h2>
+                <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+                <a><button class="basic-button">edit profile</button></a>
+
+
+            </div>
+        </section>
+
+    </section>
+
+    <section class="container">
+        <nav class="site-nav secondarynav profile">
+            <ul>
+                <li><a href="user-panel.html">Overview</a></li>
+                <li><a href="#0">Pending</a></li>
+                <li><a href="#0">Accepted</a></li>
+                <li><a href="#0">Confirmed</a></li>
+                <li><a href="new-event.html" class="active">+</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    
+    <section class="content container">
         <form>
             <div class="group">
                 <div class="select">
@@ -78,12 +130,21 @@
                 <label>Message</label>
             </div>
             <div class="btn-box">
-                <button class="btn btn-cancel" type="button">cancel</button>
-                <button class="btn btn-submit" type="submit">submit</button>
+                <a class="btn btn-cancel" type="button">cancel</a>
+                <a class="btn btn-submit" type="submit">submit</a>
             
             </div>
         </form>
     </section>
+
+    </div>
+    <!-- TO DO: Footer -->
+    <footer>
+        <h3>Designed by Marto</h1>
+    </footer>
+    <!-- Javascript -->
+    <!-- In the footer for better performance -->
+    <script src="js/scripts.js"></script>
 
 </body>
 

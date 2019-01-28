@@ -40,7 +40,7 @@
 </head>
 
 <body class="image-below-header">
-
+<div id="wrapper">
     <!-- Old Browser Warning -->
     <!-- If you're supporting IE 6-7, remove this -->
     <!--[if lt IE 8]>
@@ -50,15 +50,24 @@
         <![endif]-->
 
     <header class="site-header">
-            <a href="#0" class="logo">Eventless</a>
+        <section class="container">
+            <a href="#0" for="openMenu" class="logo">Eventless</a>
 
-            <nav class="site-nav">
+            <nav class="site-nav" id="menu">
                 <ul>
                     <li><a href="#0">Home</a></li>
                     <li><a href="#0">About</a></li>
                     <li><a href="user-panel.html">Profile</a></li>
                 </ul>
             </nav>
+            <div class="menu-toggle">
+                <button class="btn-toggle" id="menu-toggle">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </button>
+            </div>
+        </section>
     </header>
 
     <section class="featured">
@@ -70,6 +79,7 @@
             <p>Content here.</p>
         </div>
     </section>
+
     <section class="container container-x">
         <h1>Today</h1>
 
@@ -167,7 +177,7 @@
                     <img src="https://via.placeholder.com/300x300" class="" />
                 </div>
             </a>
-                        <a href="#">
+            <a href="#">
                 <div class="card">
                     <div class="card-top">
                         <h3>Title</h3>
@@ -249,7 +259,7 @@
             </div>
         </div>
     </section>
-
+    </div>
 
     <!-- TO DO: Footer -->
     <footer>
