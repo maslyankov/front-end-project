@@ -15,7 +15,7 @@ header.site-header section.container {
     flex-direction: row !important;
 }
 
-.logo {
+#logo {
     text-decoration: none;
     color: $logo-color;
     font-size: 0.9rem;
@@ -44,157 +44,110 @@ header.site-header section.container {
         text-transform: uppercase;
         text-decoration: none;
 
-        padding: 5px 20px;
+        padding: 10px 20px;
         display: inline-block;
     }
 
 }
 
-#menu{
+#menu {
     display: none;
 }
 
-.visible{
+.visible {
     display: flex !important;
 }
-// menu button
 
-$toggle-size: 35px;
-$toggle-line-color: $nav-color;
-$toggle-line-focus-color: black;
-$toggle-line-size: $toggle-size/12;
-$toggle-line-angle: 140deg;
-$toggle-anim-speed: 0.9s;
 
-.btn-toggle {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  padding: 12px;
-  background-color: transparent;
-  border-color: transparent;
-  outline: none;
-  transform: translateZ(0);
-  transition: transform 0.1s ease-out;
-  
-  &:active { transform: translateY(4px); }
-  
-  &:focus .line:after { 
-    background-color: $toggle-line-focus-color;
-  }
-}
-
-.line {
-  display: block;
-  width: $toggle-size;
-  padding: $toggle-line-size;
-  
-  &:after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: $toggle-line-size;
-    background-color: $toggle-line-color;
-    border-radius: 2px;
-    transform: translateZ(0) rotate(0);
-    transition: background-color 0.2s ease-out;
-  }
-    
-  .open & {
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        animation: jump-#{$i} $toggle-anim-speed forwards ease;
-        &:after {
-          animation: line-#{$i} $toggle-anim-speed forwards ease-in-out;
-        }
-      }
-    }
-  }
-  
-  .close & {
-    @for $i from 1 through 2 {
-      &:nth-child(#{$i}) {
-        animation: jump-#{$i} $toggle-anim-speed reverse ease;
-        &:after {
-          animation: line-#{$i} $toggle-anim-speed reverse ease-in-out;
-        }
-      }
-    }
-  }
-  
-  .open &,
-  .close & {
-    &:nth-child(3) {
-      animation: jump-3 $toggle-anim-speed forwards ease-out;
-    }
-  }
-}
-
-@keyframes line-1 {
-  10% { transform: translateZ(0) rotate(0) }
-  80% { transform: translateZ(0) rotate($toggle-line-angle - 10) }
-  90%, 100% { transform: translateZ(0) rotate($toggle-line-angle) }
-}
-
-@keyframes line-2 {
-  10% { transform: translateZ(0) rotate(0) }
-  20% { transform: translateZ(0) rotate(10deg) }
-  90%, 100% { transform: translateZ(0) rotate(-$toggle-line-angle) }
-}
-
-@keyframes jump-1 {
-  10% { transform: translateY(0) }
-  50% { transform: translateY(-$toggle-line-size * 12) }
-  90%, 100% { transform: translateY(-$toggle-line-size * 1) }
-}
-
-@keyframes jump-2 {
-  10% { transform: translateY(0) }
-  50% { transform: translateY(-$toggle-line-size * 10) }
-  85%, 100% { transform: translateY(-$toggle-line-size * 3) }
-}
-
-@keyframes jump-3 {
-  10% { transform: translateY(-$toggle-line-size*1) rotate(15deg) }
-  30% { transform: translateY(-$toggle-line-size*4) rotate(-10deg) }
-  50% { transform: translateY($toggle-line-size) rotate(5deg) }
-  80% { transform: translateY(0) }
-}
-
-@keyframes glow {
-  50% {
-    box-shadow: rgba(lighten($toggle-line-color, 10%), 0.4) 0 0 2px 2px;
-  }
-}
-
-a.active {
+a#active {
     border-bottom: 1px $primary-color solid;
 }
 
-.secondarynav a {
-    color: $secondarynav-color !important;
+.secondarynav {
+
+    a {
+        color: $secondarynav-color !important;
+    }
 }
 
 .menu-toggle {
-    label {
-        position: relative !important;
+    height: 20px;
+    padding: 5px;
+    #nav-icon1 {
+        width: 30px;
+        height: 100%;
+        display: flex;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        //margin: 8px;
+    }
+
+    #nav-icon1 span {
+        display: flex;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: $nav-color;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+
+    #nav-icon1 span{
+        &:nth-child(1) {
+            top: 0px;
+        }
+
+        &:nth-child(2) {
+            top: 10px;
+        }
+
+        &:nth-child(3) {
+            top: 20px;
+        }
+    }
+
+    #nav-icon1.open span{
+        &:nth-child(1) {
+            top: 10px;
+            -webkit-transform: rotate(135deg);
+            -moz-transform: rotate(135deg);
+            -o-transform: rotate(135deg);
+            transform: rotate(135deg);
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+
+        &:nth-child(3) {
+            top: 10px;
+            -webkit-transform: rotate(-135deg);
+            -moz-transform: rotate(-135deg);
+            -o-transform: rotate(-135deg);
+            transform: rotate(-135deg);
+        }
     }
 }
 
-@include breakpoint(phablet) {
-
-
-    .featured {
-        padding: 80px 10px 10px 10px;
-    }
-
-    body {
-        padding-top: 70px;
-    }
-}
+@include breakpoint(phablet) {}
 
 
 @include breakpoint(tablet) {}
@@ -202,7 +155,7 @@ a.active {
 @include breakpoint(laptop) {
     .site-nav {
         a:hover {
-            color: $nav-color;
+            color: $nav-hover-color;
         }
     }
 }

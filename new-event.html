@@ -41,33 +41,34 @@
 
 <body>
     
-    <div id="wrapper">
+    
     <header class="site-header">
         <section class="container">
-            <a href="#0" for="openMenu" class="logo">Eventless</a>
+            <a href="#0" for="openMenu" id="logo">Eventless</a>
 
             <nav class="site-nav" id="menu">
                 <ul>
-                    <li><a href="#0">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#0">About</a></li>
                     <li><a href="user-panel.html">Profile</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle">
-                <button class="btn-toggle" id="menu-toggle">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </button>
+                <div id="nav-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </section>
     </header>
-     
+
+    <div id="wrapper">
     <section class="container container-x">
         <h1>Profile</h1>
         <section class="profile">
             <div class="profile-left">
-                <img src="https://via.placeholder.com/300x300" alt="Profile Photo" class="profile-photo" />
+                <img src="/img/default-profile.png" alt="Profile Photo" class="profile-photo" />
             </div>
             <div class="profile-right">
                 <h2>Jesus</h2>
@@ -80,14 +81,14 @@
 
     </section>
 
-    <section class="container">
-        <nav class="site-nav secondarynav profile">
+    <section class="container container-x">
+        <nav class="site-nav secondarynav overflow-x profile" id="scrollDiv">
             <ul>
                 <li><a href="user-panel.html">Overview</a></li>
                 <li><a href="#0">Pending</a></li>
                 <li><a href="#0">Accepted</a></li>
                 <li><a href="#0">Confirmed</a></li>
-                <li><a href="new-event.html" class="active">+</a></li>
+                <li><a href="new-event.html" id="active">+</a></li>
             </ul>
         </nav>
     </section>
@@ -144,6 +145,7 @@
     </footer>
     <!-- Javascript -->
     <!-- In the footer for better performance -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type='text/javascript'></script>
     <script src="js/scripts.js"></script>
 
 </body>

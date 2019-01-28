@@ -1,26 +1,54 @@
-const btn = document.getElementById("menu-toggle");
-const lines = btn.querySelectorAll(".line");
-const cls = {
-    open: "open",
-    close: "close"
-};
-let btnClass = cls.open;
-let menuClass = "visible";
-
-var x = document.getElementById("menu");
-
-btn.addEventListener("click", () => {
-    if (btn.classList.contains(cls.open)) {
-        btn.classList.remove(btnClass);
-        x.classList.remove(menuClass);
-        btnClass = cls.close;
-    } else if (btn.classList.contains(cls.close)) {
-        btn.classList.remove(btnClass);
-        x.classList.remove(menuClass);
-        btnClass = cls.open;
-    }
-
-    void btn.offsetWidth;
-    btn.classList.add(btnClass);
-    x.classList.add(menuClass);
+$('.menu-toggle').on('click', function (e) {
+    $('#nav-icon1').toggleClass("open"); //you can list several class names 
+    $('#logo').toggleClass("hide");
+    $('#menu').toggleClass("show");
+    e.preventDefault();
 });
+
+var active = document.getElementById('active');
+
+if (active != null) {
+    active.scrollIntoView();
+    // will scroll to active
+}
+
+//gallery
+$(function () {
+    $(".img-w").each(function () {
+        $(this).wrap("<div class='img-c'></div>")
+        let imgSrc = $(this).find("img").attr("src");
+        $(this).css('background-image', 'url(' + imgSrc + ')');
+    })
+
+
+    $(".img-c").click(function () {
+        let w = $(this).outerWidth()
+        let h = $(this).outerHeight()
+        let x = $(this).offset().left
+        let y = $(this).offset().top
+
+
+        $(".active").not($(this)).remove()
+        let copy = $(this).clone();
+        copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+        $(".active").css('top', y - 8);
+        $(".active").css('left', x - 8);
+
+        setTimeout(function () {
+            copy.addClass("positioned")
+        }, 0)
+
+    })
+
+
+
+
+})
+
+$(document).on("click", ".img-c.active", function () {
+    let copy = $(this)
+    copy.removeClass("positioned active").addClass("postactive")
+    setTimeout(function () {
+        copy.remove();
+    }, 500)
+})

@@ -19,7 +19,7 @@ $white: #ffffff;
 // ----------------------------------------
 
 $body-bg: #ffffff;
-$header-bg: rgba(0,0,0,0.7);
+$header-bg: rgba(255,255,255,0.7);
 
 // ----------------------------------------
 // // ------ Typography Settings ------ dsa
@@ -28,9 +28,10 @@ $header-bg: rgba(0,0,0,0.7);
 $font-stack:    Helvetica, sans-serif;
 $primary-color: #333;
 $hover-color: #ccc;
-$nav-color: #fff;
+$nav-color: #000;
+$nav-hover-color: #ccc;
 $secondarynav-color: $primary-color;
-$logo-color: #fff;
+$logo-color: #000;
 
 // ----------------------------------------
 // // ------ import config ------
@@ -57,8 +58,9 @@ $logo-color: #fff;
 @import "lib/buttons";
 @import "lib/header";
 @import "lib/profile";
+@import "lib/gallery";
 
-
+@import "lib/animations";
 
 
 // ----------------------------------------

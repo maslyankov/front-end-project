@@ -1,0 +1,9 @@
+img:hover {
+  -webkit-transform: scale(1.08);
+  -ms-transform: scale(1.08);
+  transform: scale(1.08);
+  -webkit-transition: -webkit-transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+  transition: -webkit-transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+  -o-transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
+  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms, -webkit-transform cubic-bezier(0.4, 0, 0.2, 1) 450ms; }

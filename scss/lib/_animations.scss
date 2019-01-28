@@ -1,0 +1,9 @@
+*:hover {
+    transition: transform ease-in-out 300ms;
+}
+
+cards>a:hover {
+  transform: scale(0.92);
+  transition: transform ease-in-out 250ms;
+}
+

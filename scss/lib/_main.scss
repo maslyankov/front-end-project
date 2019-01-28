@@ -11,7 +11,6 @@ body {
     //   padding-top: 50px;
     z-index: 0;
     background: #fff;
-    padding-top: 50px;
     height: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -24,9 +23,11 @@ html, body{
        
 #wrapper{
   min-height:100%;
+  padding-top: 70px;
 }
-.image-below-header{
-    padding-top:0;
+
+.below-header{
+    padding-top:0 !important;
 }
 
 a {
@@ -112,13 +113,19 @@ p, h1, h2, h3, h4, h5 {
         padding: 15px;
         background: rgba(255, 255, 255, 0.8);
         width: 100%;
-
+        display: flex;
         h1,
         h2,
         h3,
         h4 {
             margin: 0;
             padding: 0;
+        }
+        .card-top-info{
+            width: 100%;
+        }
+        .date{
+            margin:0;
         }
     }
 }
@@ -181,7 +188,7 @@ div.card-last {
 }
 
 
-.search {
+.list {
     .card {
         width: 100% !important;
         display: block;
@@ -200,9 +207,96 @@ div.card-last {
     }
 }
 
+.list-detailed {
+    
+}
 
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
 
+div.flex-row div{
+    margin-right: 50px;
+}
 
+.event-view {
+    h1 {
+        width: 100%;
+    }
+    
+    h4 {
+        font-weight: 10;
+        font-style: italic;
+    }
+    
+    h2{
+        margin-bottom: 20px;
+    }
+    
+    p{
+        font-size: 1.1em;
+        line-height: 22px;
+    }
+    
+    img {
+        width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
+    }
+    
+    .subinfo{
+        .left{
+            width: 20%;
+        }
+    }
+    
+    .group{
+        margin: 0;
+    }
+}
+
+.comments {
+    ul li {
+        list-style: none;
+        margin-bottom: 20px;
+    
+        div{
+        display: flex;
+        flex-direction: row;
+            margin: 10px 0;
+            span{
+                width:100%;
+                margin: 0 10px;
+                font-size: 1.22em;
+            }
+            small{
+
+            }
+        }
+    }
+    
+    
+    
+    img.profile-photo{
+        height: 40px;
+        width: auto;
+    }
+}
+
+.date{
+    text-align: right;
+    text-transform: uppercase;
+    margin: 10px;
+    h3{
+        margin: 0;
+    }
+    
+}
+
+.no-padding{
+    padding: 0;
+}
 
 footer {
     @extend %all-centered-middle;
@@ -213,3 +307,14 @@ footer {
     background: #000;
 }
 
+.full-width{
+        width: 100%;
+}
+
+.hide{
+    display:none;
+}
+
+.show {
+    display: flex !important;
+}
