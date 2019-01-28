@@ -292,6 +292,14 @@ div.card-last {
 div.flex-row div {
   margin-right: 50px; }
 
+nav div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+
+.accept {
+  color: green; }
+
 .event-view h1 {
   width: 100%; }
 

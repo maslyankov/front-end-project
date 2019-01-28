@@ -232,6 +232,14 @@ div.flex-row div{
     margin-right: 50px;
 }
 
+nav div{
+    display: inline-flex;
+}
+
+.accept {
+    color: green;
+}
+
 .event-view {
     h1 {
         width: 100%;
