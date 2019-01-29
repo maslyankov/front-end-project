@@ -137,8 +137,32 @@ h4 {
 
 .featured {
   height: 300px;
-  padding: 60px 10px 10px 10px;
-  background: #999; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .featured img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%; }
+  .featured .container {
+    position: absolute;
+    top: 0;
+    margin-top: 80px;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .featured .container h1,
+    .featured .container h2,
+    .featured .container h3,
+    .featured .container h4 {
+      margin: 0;
+      padding: 0; }
+    .featured .container .card-top-info {
+      width: 100%; }
 
 .overflow-x {
   overflow: auto;
@@ -279,8 +303,6 @@ nav div {
   display: flex !important; }
 
 @media (min-width: 37.5em) {
-  .featured {
-    padding: 80px 10px 10px 10px; }
   #menu {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
