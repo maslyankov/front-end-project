@@ -262,7 +262,9 @@ nav div {
 
 .comments ul li {
   list-style: none;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc; }
   .comments ul li div {
     display: -webkit-box;
     display: -ms-flexbox;
