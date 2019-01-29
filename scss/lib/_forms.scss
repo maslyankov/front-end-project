@@ -1,14 +1,3 @@
-form {
-    @extend %card;
-    background: #fff;
-    border: 0 solid #000;
-    padding: 20px;
-    font-size: 1.3em;
-
-    width: calc(100% - 20px);
-    border-radius: 30px;
-}
-
 // VARIABLES // ============================== //
 $bg-color: #424242;
 $hl-color: #2196F3;
@@ -19,205 +8,224 @@ $width: 100%;
 *,
 :before,
 :after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 // FORM // ============================== //
 form {
-  
-  h1 {
-    font-size: 3em;
-    font-weight: 300;
-    text-align: center;
-    color: $hl-color;
-  }
-  h5 {
-    text-align: center;
-    text-transform: uppercase;
-    color: $muted-color;
-  }
-  hr.sep {
-    background: $hl-color;
-    box-shadow: none;
-    border: none;
-    height: 2px;
-    width: 25%;
-    margin: 0px auto 45px auto;
-  }
-  .emoji {
-    font-size: 1.2em;
-  }
+
+    background: #fff;
+    border: 0 solid #000;
+    padding: 20px;
+    font-size: 1.3em;
+
+    width: calc(100% - 20px);
+    border-radius: 30px;
+
+
+    h1 {
+        font-size: 3em;
+        font-weight: 300;
+        text-align: center;
+        color: $hl-color;
+    }
+
+    h5 {
+        text-align: center;
+        text-transform: uppercase;
+        color: $muted-color;
+    }
+
+    hr.sep {
+        background: $hl-color;
+        box-shadow: none;
+        border: none;
+        height: 2px;
+        width: 25%;
+        margin: 0px auto 45px auto;
+    }
+
+    .emoji {
+        font-size: 1.2em;
+    }
 }
 
 .group {
-  position: relative;
-  margin: 45px 0;
+    position: relative;
+    margin: 45px 0;
 }
 
 // INPUTS // ============================== //
 textarea {
-  resize: none;
+    resize: none;
 }
 
 input,
 textarea {
-  background: none;
-  color: $muted-color;
-  font-size: 18px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  width: $width;
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid $muted-color;
-  &:focus {
-    outline: none;
-  }
-  &:focus ~ label,
-  &:valid ~ label {
-    top: -14px;
-    font-size: 12px;
-    color: $hl-color;
-  }
-  &:focus ~ .bar:before {
+    background: none;
+    color: $muted-color;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
     width: $width;
-  }
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid $muted-color;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus ~ label,
+    &:valid ~ label {
+        top: -14px;
+        font-size: 12px;
+        color: $hl-color;
+    }
+
+    &:focus ~ .bar:before {
+        width: $width;
+    }
 }
 
 input[type="password"] {
-  letter-spacing: 0.3em;
+    letter-spacing: 0.3em;
 }
 
 label {
-  color: $muted-color;
-  font-size: 16px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: $trans-time ease all;
+    color: $muted-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: $trans-time ease all;
 }
 
 .bar {
-  position: relative;
-  display: block;
-  width: $width;
-  &:before {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: $hl-color;
-    transition: $trans-time ease all;
-    left: 0%;
-  }
+    position: relative;
+    display: block;
+    width: $width;
+
+    &:before {
+        content: '';
+        height: 2px;
+        width: 0;
+        bottom: 0px;
+        position: absolute;
+        background: $hl-color;
+        transition: $trans-time ease all;
+        left: 0%;
+    }
 }
 
 /* select starting stylings ------------------------------*/
 .select {
-  font-family:
-    'Roboto','Helvetica','Arial',sans-serif;
-	position: relative;
-	width: 100%;
+    font-family:
+        'Roboto', 'Helvetica', 'Arial', sans-serif;
+    position: relative;
+    width: 100%;
 }
 
 .select-text {
-	position: relative;
-	font-family: inherit;
-	background-color: transparent;
-	width: 100%;
-	padding: 10px 10px 10px 0;
-	font-size: 18px;
-	border-radius: 0;
-	border: none;
-	border-bottom: 1px solid $muted-color;
+    position: relative;
+    font-family: inherit;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 10px 10px 0;
+    font-size: 18px;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid $muted-color;
 }
 
 /* Remove focus */
 .select-text:focus {
-	outline: none;
-	border-bottom: 1px solid rgba(0,0,0, 0);
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
 }
 
-	/* Use custom arrow */
+/* Use custom arrow */
 .select .select-text {
-	appearance: none;
-	-webkit-appearance:none
+    appearance: none;
+    -webkit-appearance: none
 }
 
 .select:after {
-	position: absolute;
-	top: 18px;
-	right: 10px;
-	/* Styling the down arrow */
-	width: 0;
-	height: 0;
-	padding: 0;
-	content: '';
-	border-left: 6px solid transparent;
-	border-right: 6px solid transparent;
-	border-top: 6px solid rgba(0, 0, 0, 0.12);
-	pointer-events: none;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    /* Styling the down arrow */
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid rgba(0, 0, 0, 0.12);
+    pointer-events: none;
 }
 
 
 /* LABEL ======================================= */
 .select-label {
-	font-weight: normal;
-	position: absolute;
-	pointer-events: none;
-	left: 0;
-	top: 10px;
-	transition: 0.2s ease all;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 10px;
+    transition: 0.2s ease all;
 }
 
 /* active state */
-.select-text:focus ~ .select-label, .select-text:valid ~ .select-label {
-	color: $hl-color;
-	top: -20px;
-	transition: 0.2s ease all;
-	font-size: 14px;
+.select-text:focus ~ .select-label,
+.select-text:valid ~ .select-label {
+    color: $hl-color;
+    top: -20px;
+    transition: 0.2s ease all;
+    font-size: 14px;
 }
 
 /* BOTTOM BARS ================================= */
 .select-bar {
-	position: relative;
-	display: block;
-	width: 100%;
+    position: relative;
+    display: block;
+    width: 100%;
 }
 
-.select-bar:before, .select-bar:after {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: 1px;
-	position: absolute;
-	background: $hl-color;
-	transition: 0.2s ease all;
+.select-bar:before,
+.select-bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: $hl-color;
+    transition: 0.2s ease all;
 }
 
 .select-bar:before {
-	left: 50%;
+    left: 50%;
 }
 
 .select-bar:after {
-	right: 50%;
+    right: 50%;
 }
 
 /* active state */
-.select-text:focus ~ .select-bar:before, .select-text:focus ~ .select-bar:after {
-	width: 50%;
+.select-text:focus ~ .select-bar:before,
+.select-text:focus ~ .select-bar:after {
+    width: 50%;
 }
 
 /* HIGHLIGHTER ================================== */
 .select-highlight {
-	position: absolute;
-	height: 60%;
-	width: 100%;
-	top: 25%;
-	left: 0;
-	pointer-events: none;
-	opacity: 0.5;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
 }

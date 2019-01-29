@@ -12,7 +12,14 @@
     .featured {
         padding: 80px 10px 10px 10px;
     }
-
+    
+    #menu {
+        display: flex !important;
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
 }
 
 @include breakpoint(laptop) {

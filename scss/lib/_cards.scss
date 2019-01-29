@@ -1,0 +1,137 @@
+//cards
+%card {
+    margin:0 10px 10px 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card {
+    @extend %card;
+    
+    position: relative;
+    background: #ccc;
+    height: 300px;
+    width: 300px;
+
+    .card-top {
+        position: absolute;
+        top: 0;
+        padding: 15px;
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        display: flex;
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+        .card-top-info{
+            width: 100%;
+        }
+        .date{
+            margin:0;
+        }
+    }
+}
+
+.cards{
+    @extend %flex;
+}
+
+.cards a,
+.cards a:hover {
+    color: inherit;
+}
+
+
+.cards-toi div.card{
+    width: 200px;
+    height: 200px;
+    
+    div.card-top{
+        height:100%;
+        @extend %all-centered-middle;
+    }
+    
+}
+
+div.card-last {
+    width: 150px !important;
+    font-size: 1.2em !important;
+    .card-top {
+        @extend %all-centered-middle;
+        height: 300px;
+        width: 150px;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+
+.list {
+    .card {
+        width: 100% !important;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .card-last .card-top,
+    .card-last {
+        height: 100px;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.list-detailed {
+    display: flex;
+    flex-flow: row wrap;
+    
+    .list-detailed-group{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    
+    .card{
+       
+        height: auto;
+        width: 400px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    a.accept, a.decline {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        //width: 30%;
+    }
+    
+    .card-detail{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+
+
+
+
+a.accept {
+    color: green;
+}
+
+a.decline {
+    color: red;
+}
