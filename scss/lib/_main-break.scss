@@ -1,13 +1,4 @@
 @include breakpoint(phablet) {
-    body {}
-
-    .list {
-        .card {
-            width: calc(33.33% - 13px) !important;
-            height: auto;
-            display: inline-block;
-        }
-    }
 
     .featured {
         padding: 80px 10px 10px 10px;
@@ -38,14 +29,5 @@
         max-width: 58em;
         margin: auto;
         padding-right: 0;
-    }
-
-
-    .list {
-        .card {
-            width: calc(25% - 14px) !important;
-            height: auto;
-            display: inline-block;
-        }
     }
 }

@@ -286,10 +286,6 @@ footer {
   display: flex !important; }
 
 @media (min-width: 37.5em) {
-  .list .card {
-    width: calc(33.33% - 13px) !important;
-    height: auto;
-    display: inline-block; }
   .featured {
     padding: 80px 10px 10px 10px; }
   #menu {
@@ -307,11 +303,7 @@ footer {
   .container {
     max-width: 58em;
     margin: auto;
-    padding-right: 0; }
-  .list .card {
-    width: calc(25% - 14px) !important;
-    height: auto;
-    display: inline-block; } }
+    padding-right: 0; } }
 
 *,
 :before,
@@ -791,13 +783,14 @@ div.card-last {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap; }
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    margin-bottom: 25px; }
   .list-detailed .card {
-    height: auto;
-    width: 400px; }
+    width: 100%;
+    height: auto; }
     .list-detailed .card img {
       width: 100%;
       height: auto; }
@@ -828,6 +821,18 @@ a.accept {
 
 a.decline {
   color: red; }
+
+@media (min-width: 37.5em) {
+  .list .card {
+    width: calc(33.33% - 13px) !important;
+    height: auto;
+    display: inline-block; } }
+
+@media (min-width: 54em) {
+  .list .card {
+    width: calc(25% - 14px) !important;
+    height: auto;
+    display: inline-block; } }
 
 *:hover {
   -webkit-transition: -webkit-transform ease-in-out 300ms;

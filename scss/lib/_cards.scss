@@ -96,13 +96,14 @@ div.card-last {
     .list-detailed-group{
         width: 100%;
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: column nowrap;
+        margin-bottom:25px;
     }
     
     .card{
-       
+        width: 100%;
         height: auto;
-        width: 400px;
+        
         img {
             width: 100%;
             height: auto;
@@ -134,4 +135,25 @@ a.accept {
 
 a.decline {
     color: red;
+}
+
+@include breakpoint(phablet) {
+
+    .list {
+        .card {
+            width: calc(33.33% - 13px) !important;
+            height: auto;
+            display: inline-block;
+        }
+    }
+}
+
+@include breakpoint(laptop) {
+    .list {
+        .card {
+            width: calc(25% - 14px) !important;
+            height: auto;
+            display: inline-block;
+        }
+    }
 }
