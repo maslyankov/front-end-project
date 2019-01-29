@@ -1,54 +1,56 @@
-$('.menu-toggle').on('click', function (e) {
-    $('#nav-icon1').toggleClass("open"); //you can list several class names 
-    $('#logo').toggleClass("hide");
-    $('#menu').toggleClass("show");
-    e.preventDefault();
-});
 
-var active = document.getElementById('active');
+    $('.menu-toggle').on('click', function (e) {
+        $('#nav-icon1').toggleClass("open"); //you can list several class names 
+        $('#logo').toggleClass("hide");
+        $('#menu').toggleClass("show");
+        e.preventDefault();
+    });
 
-if (active != null) {
-    active.scrollIntoView();
-    // will scroll to active
-}
+    var active = document.getElementById('active');
 
-//gallery
-$(function () {
-    $(".img-w").each(function () {
-        $(this).wrap("<div class='img-c'></div>")
-        let imgSrc = $(this).find("img").attr("src");
-        $(this).css('background-image', 'url(' + imgSrc + ')');
+    if (active != null) {
+        active.scrollIntoView();
+        // will scroll to active
+    }
+
+    //gallery
+    $(function () {
+        $(".img-w").each(function () {
+            $(this).wrap("<div class='img-c'></div>")
+            let imgSrc = $(this).find("img").attr("src");
+            $(this).css('background-image', 'url(' + imgSrc + ')');
+        })
+
+
+        $(".img-c").click(function () {
+            let w = $(this).outerWidth()
+            let h = $(this).outerHeight()
+            let x = $(this).offset().left
+            let y = $(this).offset().top
+
+
+            $(".active").not($(this)).remove()
+            let copy = $(this).clone();
+            copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
+            $(".active").css('top', y - 8);
+            $(".active").css('left', x - 8);
+
+            setTimeout(function () {
+                copy.addClass("positioned")
+            }, 0)
+
+        })
+
+
+
+
     })
 
-
-    $(".img-c").click(function () {
-        let w = $(this).outerWidth()
-        let h = $(this).outerHeight()
-        let x = $(this).offset().left
-        let y = $(this).offset().top
-
-
-        $(".active").not($(this)).remove()
-        let copy = $(this).clone();
-        copy.insertAfter($(this)).height(h).width(w).delay(500).addClass("active")
-        $(".active").css('top', y - 8);
-        $(".active").css('left', x - 8);
-
+    $(document).on("click", ".img-c.active", function () {
+        let copy = $(this)
+        copy.removeClass("positioned active").addClass("postactive")
         setTimeout(function () {
-            copy.addClass("positioned")
-        }, 0)
-
+            copy.remove();
+        }, 500)
     })
 
-
-
-
-})
-
-$(document).on("click", ".img-c.active", function () {
-    let copy = $(this)
-    copy.removeClass("positioned active").addClass("postactive")
-    setTimeout(function () {
-        copy.remove();
-    }, 500)
-})
