@@ -175,7 +175,7 @@ h4 {
 a {
   text-decoration: none; }
 
-footer, .cards-toi div.card div.card-top, div.card-last .card-top {
+.cards-toi div.card div.card-top, div.card-last .card-top, footer ul li a {
   display: -ms-flexbox;
   -ms-flex-pack: center;
   -ms-flex-align: center;
@@ -266,13 +266,6 @@ nav div {
 
 .no-padding {
   padding: 0; }
-
-footer {
-  width: 100%;
-  height: 100px;
-  margin-top: 30px;
-  color: #ccc;
-  background: #000; }
 
 .full-width {
   width: 100%; }
@@ -833,6 +826,40 @@ a.decline {
     width: calc(25% - 14px) !important;
     height: auto;
     display: inline-block; } }
+
+footer {
+  width: 100%;
+  height: 100px;
+  margin-top: 30px;
+  color: #ccc;
+  background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
+  footer ul {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  footer ul li {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex; }
+    footer ul li a {
+      color: #fff;
+      width: 100%;
+      padding: 20px;
+      vertical-align: middle; }
 
 *:hover {
   -webkit-transition: -webkit-transform ease-in-out 300ms;
